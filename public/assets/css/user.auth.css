@@ -1,0 +1,35 @@
+.login-container {
+    border: 1px solid gray;
+    border-radius: 2.5%;
+}
+
+.log-in-heading {
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+.log-in-options a {
+    width: 10%;
+    height: 10%;
+}
+
+.log-in-options img {
+    width: 100%;
+    height: 100%;
+}
+.form-anchor{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.log-in-options img:hover{
+    transform: scale(1.2);
+}
+/* .alerts{
+    display: none;
+} */
+.notification{
+    display: none;
+}
+

@@ -21,6 +21,14 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'email_verified_at',
+        'user_image',
+        'is_admin',
+        'is_member',
+        'google_id',
+        'twitter_id',
+        'facebook_id'
+        // Add other fields here as needed
     ];
 
     /**

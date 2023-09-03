@@ -20,14 +20,24 @@
 
 <body>
 
-    <div class="d-flex flex-container align-items-center justify-content-center mx-auto vh-100 w-25">
+    <div class="d-flex flex-container align-items-center justify-content-center mx-auto vh-100 w-25 mt-5 mb-5">
         <div class="login-container mx-auto p-3">
             <div>
                 @if (!$registered)
-                <div class="alert alert-danger">
-                    Sorry, Not able to register you right now.
-                </div>
+                    <div class="alert alert-danger">
+                        Sorry, Not able to register you right now.
+                    </div>
                 @endif
+                @if (!$registered && !$validForm )
+                    <div class="alert alert-danger">
+                       Data Entered in Fields is In-Correct
+                    </div>
+                @endif
+                @if ($accountExists)
+                <div class="alert alert-danger">
+                   This E-Mail is already registered.
+                </div>
+            @endif
                 <form id="registration-form" action="/registeringUser" method="post">
                     @csrf
                     <h4 class="text-center log-in-heading mb-4">
@@ -64,7 +74,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" name="confirm_password" id="confirm_password">
+                        <input type="password" class="form-control" name="password_confirmation" id="confirm_password">
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary p-0.5 w-50">Submit</button>
@@ -76,10 +86,10 @@
                     Register with
                 </h6>
                 <div class="d-flex justify-content-center log-in-options mt-3 self-align-center gap-5">
-                    <a href="#">
+                    <a href="/auth/googleLogIn">
                         <img src="assets/images/google.png" />
                     </a>
-                    <a href="#">
+                    <a href="/auth/facebookRegistration">
                         <img src="assets/images/facebook.png" />
                     </a>
                     <a href="#">
@@ -101,19 +111,19 @@
             const password = $('#password').val();
             const confirm_password = $('#confirm_password').val();
             if (email.trim() === "" || password.trim() === "" || confirm_password.trim() === "") {
-                updateAlerts('#empty-fields',e);
+                updateAlerts('#empty-fields', e);
             }
 
             if (!isValidEmail(email)) {
-                updateAlerts('#in-correct-mail',e);
+                updateAlerts('#in-correct-mail', e);
             }
 
-            if (password.trim().length < 8 || confirm_password.trim().length < 8) {
-                updateAlerts('#in-complete-password',e);
+            if (password.trim().length < 4 || confirm_password.trim().length < 4) {
+                updateAlerts('#in-complete-password', e);
             }
 
             if (password.trim() !== confirm_password.trim()) {
-                updateAlerts('#in-correct-password',e);
+                updateAlerts('#in-correct-password', e);
             }
         });
 

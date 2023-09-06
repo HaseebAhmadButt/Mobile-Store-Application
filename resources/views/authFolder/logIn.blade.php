@@ -9,7 +9,7 @@
         //App Name
         'app.name',
         // Alternative Name
-        'app.name',
+        'Laravel',
     ) }}
     </title>
     <link rel="stylesheet" href="{{ asset('assets/css/user.auth.css') }}">

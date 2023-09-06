@@ -15,13 +15,17 @@ use App\Http\Controllers\userAuthFormController;
 |
 */
 
-Route::get('/', function () {
-    return view('authFolder.logIn');
+Route::get("/", function(){
+    return view('home');
 });
 
-Route::get('/verifyEmail', function () {
-    return view('verifyEmail');
-});
+// Route::get('/', function () {
+//     return view('authFolder.logIn');
+// });
+
+// Route::get('/verifyEmail', function () {
+//     return view('verifyEmail');
+// });
 
 Route::get('/register', function () {
     return view('authFolder.register', ['registered'=>true, 'validForm'=>true, 'accountExists'=>false]);

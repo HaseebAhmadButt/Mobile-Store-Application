@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap');
+
+.brands-list{
+    margin: 0 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5%;
+    padding: unset !important;
+}
+.brands-list h6{
+    text-align: center;
+    flex:5%;
+    width: max-content;
+    height: max-content;
+    padding: 1% 0;
+    font-size: 120%;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: Nunito;
+}
+.brands-list h6:hover{
+    background-color: aliceblue;
+    color: rgba(0,0,0,0.7);
+    border: unset;
+    cursor: pointer;
+}
+
+.products-list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5%;
+}
+
+.product-card{
+    flex: 20%;
+    height: 400px;
+    margin-top: 10%;
+    background-color: #fff;
+    border-radius: 2.5%;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    /* box-shadow: ; */
+}
+.productImage{
+    width: 100%;
+    height: 60%;
+}
+.productImage img{
+    border-radius: 2.5% 2.5% 0 0 ;
+    width: 100%;
+    height: 100%;
+}
+.product-details{
+    margin: 2.5%;
+    font-family: Nunito;
+    text-align: center;
+}
+.product-details h4{
+    color: rgba(0,0,0,0.5);
+    padding: unset;
+}
+.product-card:hover{
+    /* position: absolute; */
+    transform: scale(1.01);
+}

@@ -17,7 +17,7 @@ use App\Http\Controllers\userAuthFormController;
 
 Route::get("/", function(){
     return view('home');
-});
+})->middleware('web');
 
 // Route::get('/', function () {
 //     return view('authFolder.logIn');

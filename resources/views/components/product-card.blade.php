@@ -5,7 +5,7 @@
                 <img src="{{ asset('assets/images/products/' . $imageName) }}" alt="">
             </div>
             <div class="product-details">
-                <h4>{{$productName}}</h4>
+                <h6>{{$productName}}</h6>
                 <span><b>Brand: </b> {{$productBrand}}</span>
                 <br>
                 <b> Old Price: </b><strike> {{$productOldPrice}} PKR</strike>

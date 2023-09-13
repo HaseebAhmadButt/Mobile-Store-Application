@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Rubik:wght@500&display=swap');
 .header{
-    margin-top: 1%;
+    /* margin-top: 1%; */
     width: 100vw;
     display: flex;
     flex-direction: row;

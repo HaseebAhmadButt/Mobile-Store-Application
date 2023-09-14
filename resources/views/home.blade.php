@@ -78,72 +78,24 @@
     </div>
     <h4 class="recent-products-heading">Featured Products</h4>
     <div class="products-list">
+        @for ($i = 0; $i< 20; $i++)
         <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
             oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
+        @endfor
     </div>
     <h4 class="recent-products-heading">Recent Products</h4>
     <div class="products-list">
+        @for ($i = 0; $i< 20; $i++)
         <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
             oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
+        @endfor
     </div>
     <h4 class="recent-products-heading">All Products</h4>
     <div class="products-list">
+        @for ($i = 0; $i< 20; $i++)
         <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
             oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
-        <x-product-card image="Apple/iphone-13.jpg" name="IPhone-13 IPhone-13 IPhone-13" brandName="Apple"
-            oldPrice="6500000" newPrice="4500000" />
+        @endfor
     </div>
     <footer>
         <x-footer />

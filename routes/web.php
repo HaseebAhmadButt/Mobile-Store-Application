@@ -19,6 +19,17 @@ Route::get("/", function(){
     return view('home');
 })->middleware('web');
 
+Route::get("/getProduct/{id}", function(){
+    return view('product');
+});
+
+
+
+
+
+
+
+
 // Route::get('/', function () {
 //     return view('authFolder.logIn');
 // });

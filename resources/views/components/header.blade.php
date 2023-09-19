@@ -1,6 +1,3 @@
-<style>
-
-</style>
 <div>
     <div class="header">
         <div class="image">

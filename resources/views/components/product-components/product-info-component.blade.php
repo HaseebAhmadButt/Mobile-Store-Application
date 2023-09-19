@@ -1,26 +1,34 @@
+
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Rubik:wght@500&display=swap');
+
     .productImage-div{
         flex: 59%;
         display: flex;
         flex-direction: column;
         gap: 1%;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5%;
+
     }
-    .productImage{
+    .product-multiple-Images{
         width: 100%;
         flex: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .productImage a{
+    .product-multiple-Images a{
         margin: auto;
         display: block;
-        width: 375px;
-        height: 350px;
-        border: 2px solid lightgray;
+        width: 400px;
+        height: 450px;
+        /* border: 2px solid lightgray; */
         padding: 2.5%;
     }
-    .productImage img{
+    .product-multiple-Images img{
         display: block;
         width: 100%;
         height: 100%;
@@ -29,13 +37,13 @@
         flex: 34%;
         display: flex;
         flex-direction: row;
-        gap: 2%;
-        margin-left: 10%;
+        gap: 10%;
+        /* margin-left: 10%; */
 
     }
     .product-images{
         margin-top: 2.5%;
-        width: 50px;
+        width: 65px;
         height: 80px;
         padding: 1%;
         border: 1px solid lightgray;
@@ -56,11 +64,12 @@
 
     .productStats-div{
         flex: 79%;
-        margin: auto;
+        /* margin: auto; */
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: start;
+        align-items: stretch;
+        padding: 2.5%;
         /* background-color: lightgreen; */
     }
     .productStats-div h3, h4, .price_area, .buttons-div{
@@ -73,13 +82,13 @@
         gap: 1%;
     }
     .buttons-div{
-        margin-top: 2%;
+        margin-top: 4%;
     }
 </style>
 <div class="product_info_upper_div">
     <div class="productImage-div">
         {{-- Product Image --}}
-        <div class="productImage">
+        <div class="product-multiple-Images">
             <a >
                 <img src="{{asset('assets/images/products/Apple/iphone-13.jpg')}}" class="main-img" alt="productImage">
             </a>
@@ -95,7 +104,7 @@
         </div>
     </div>
     <div class="productStats-div">
-        <h3>IPhone-13 IPhone-13 IPhone-13</h3>
+        <h3 style="Rubik">IPhone-13 IPhone-13 IPhone-13</h3>
         <h4>Brand: Apple</h4>
         <span class="price_area"><h6>Old Price: </h6><strike>765908 PKR</strike></span>
         <span class="price_area"><h6>New Price: </h6>765908 PKR</span>

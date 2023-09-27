@@ -1,6 +1,11 @@
+body{
+    background-color: rgba(0,0,0,0.25) !important;
+}
+
 .login-container {
     border: 1px solid gray;
     border-radius: 2.5%;
+    background-color: white;
 }
 
 .log-in-heading {

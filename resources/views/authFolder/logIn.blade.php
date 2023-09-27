@@ -5,15 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Log In | {{ config(
-        //App Name
-        'app.name',
-        // Alternative Name
-        'Laravel',
-    ) }}
+    <title>Log In |
+        {{ config(
+            //App Name
+            'app.name',
+            // Alternative Name
+            'Laravel',
+        ) }}
     </title>
+
     <link rel="stylesheet" href="{{ asset('assets/css/user.auth.css') }}">
     @include('cdnResources.cdn')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
@@ -21,13 +24,20 @@
     <div class="d-flex flex-container align-items-center justify-content-center mx-auto vh-100 w-25">
         <div class="login-container mx-auto p-3">
             <div>
-                <form>
+                <form id="loginForm" action="/logInValidation">
                     <h3 class="text-center log-in-heading mb-4">
                         LOG IN
                     </h3>
+                    <div class="alert alert-danger notification e-mail" role="alert">
+                        In-Valid E-Mail
+                    </div>
+                    <div class="alert alert-danger notification password" role="alert">
+                        Please Enter Your Password
+                    </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="Please Enter Your Email">
+                        <input type="email" class="form-control" id="email"
+                            aria-describedby="Please Enter Your Email">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
@@ -39,7 +49,7 @@
                         <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                     </div>
                     <div class="mb-3 form-anchor">
-                        <a href="{{route('forgotPassword')}}"> Forgot Password </a>
+                        <a href="{{ route('forgotPassword') }}"> Forgot Password </a>
                     </div>
                     <div class="clear">
                     </div>
@@ -68,5 +78,31 @@
         </div>
     </div>
 </body>
+<script type="module">
+    $(document).ready(function() {
+        $("#loginForm").submit(function(e) {
+            $(".alert").css({
+                'display':'none'
+            });
+            e.preventDefault();
+            var email = $("#email").val();
+            var password = $("#password").val();
+
+            if (email.trim() === "" || !isValidEmail(email.trim())) {
+                $(".e-mail").css({'display':'block'});
+                return;
+            }
+
+            if (password.trim() === "") {
+                $(".password").css({'display':'block'});
+                return;
+            }
+        });
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+    });
+</script>
 
 </html>

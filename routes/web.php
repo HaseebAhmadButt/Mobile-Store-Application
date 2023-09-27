@@ -53,9 +53,30 @@ Route::get('/auth/facebook/callback',[userAuthFormController::class, 'facebookCa
 
 
 
+
+
+
 Route::post('/registeringUser', [userAuthFormController::class, 'registerUser']);
 Route::post('/emailVerification', [userAuthFormController::class, 'emailVerification']);
 
 Route::get('/forgotPassword', function () {
     return view('authFolder.forgotPassword.enterEmail');
 })->name('forgotPassword');
+
+Route::get('/singIn', function(){
+    return view('authFolder.logIn');
+});
+
+Route::post('/logInValidation', function(){
+
+});
+
+
+// Below Routes Should be placed under the authorization Middleware
+
+Route::get("/profile", function(){
+    return view('profile');
+});
+Route::middleware(['auth'])->group(function(){
+
+});

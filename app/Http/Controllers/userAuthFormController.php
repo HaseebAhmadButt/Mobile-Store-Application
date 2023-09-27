@@ -55,6 +55,37 @@ class userAuthFormController extends Controller
             ->withCookie('user_account', $email, 5);
     }
 
+
+    function logInValidation(Request $request)
+    {
+        $validation = Validator::make($request->all(), [
+            'email' => "string|required|email|unique:users,email",
+            'password' => 'string|min:8|confirmed'
+        ]);
+        if ($validation->fails()) {
+            return view('authFolder.logIn', ['registered' => false, 'validForm' => false, 'accountExists' => false]);
+        }
+        $password = Hash::make($request->input('password'));
+        $email = $request->input('email');
+        try {
+            
+        } catch (\Exception $e) {
+            return view('authFolder.register', ['registered' => false, 'validForm' => true, 'accountExists' => true]);
+        }
+
+        // $hashedKey = Hash::make($email);
+        $hiddenCode = substr($password, 50, 6);
+        Cache::put($email, $hiddenCode);
+        Mail::to($email)->send(new accountVerificationMail(
+            [
+                'title' => 'Account Verification Email',
+                'Body' => 'This your account verification 6 character code is - ' . $hiddenCode
+            ]
+        ));
+        return response(view('authFolder.verifyEmail', ['accountCreated' => true, 'incorrectCode' => false]))
+            ->withCookie('user_account', $email, 5);
+    }
+
     function emailVerification(Request $request){
         $val = Validator::make($request->all(), [
             'verification_Code' => 'string|min:6|max:6|required'
@@ -128,4 +159,6 @@ class userAuthFormController extends Controller
             return view('authFolder.register', ['registered' => false, 'validForm' => true, 'accountExists' => true]);
         }
     }
+
+
 }

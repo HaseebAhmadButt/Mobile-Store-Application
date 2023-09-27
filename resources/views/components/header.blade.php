@@ -18,13 +18,13 @@
                 @endphp
                 @if (!is_null($user))
                     <li id="user_profile">
-                        <a href="#" class="user_profile_link">
+                        <a href="/profile" class="user_profile_link">
                             <i class="fa fa-solid fa-user"></i>
                         </a>
                     </li>
                 @else
                     <li id="sign_in">
-                        <a href="#" class="sign_in_link">
+                        <a href="/singIn" class="sign_in_link">
                             Sign In
                         </a>
                     </li>
